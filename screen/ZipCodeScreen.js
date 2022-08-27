@@ -76,6 +76,18 @@ const style = StyleSheet.create(
         flexDirection: 'column',
     
       },
+      textCode: {
+        fontSize: 20,
+        fontWeight: "bold",
+        textAlign: 'center',
+        color: 'black',
+      },
+      textPlace: {
+        fontSize: 20,
+        fontWeight: "bold",
+        textAlign: 'center',
+        color: 'black',
+      }
     }
     
   ) 
