@@ -9,7 +9,7 @@ export default function() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name = "Home" component = {ZipCodeScreen}/>
+        <Stack.Screen name = "PowerBy6310110374" component = {ZipCodeScreen}/>
         <Stack.Screen name = "Weather" component={WeatherScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
