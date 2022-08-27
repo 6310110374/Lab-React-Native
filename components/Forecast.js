@@ -16,6 +16,12 @@ export default function Forecast(props) {
                 <Text style = {styles.value}>{props.temp}</Text>
                 <Text style = {styles.temp}>°C</Text>
             </View>
+                <View>
+                    <Text style={styles.Humidity}>Humidity</Text>
+                    <Text style={styles.text}>{props.humidity} RH</Text>
+                    <Text style={styles.WindSpeed}>Wind speed</Text>
+                    <Text style={styles.text}>{props.wind} knots</Text>
+                </View>
         </View>
     )
 }
@@ -33,6 +39,7 @@ const styles = StyleSheet.create({
         fontSize: 25,
         textAlign: 'center',
         color: 'white',
+        lineHeight: 40,
     },
 
     value: {
@@ -40,7 +47,7 @@ const styles = StyleSheet.create({
         fontWeight: "norml", 
         color: 'white', 
         textAlign: 'center',
-
+        lineHeight: 60,
     },
 
     temp: {
@@ -49,5 +56,26 @@ const styles = StyleSheet.create({
         color: 'white',
         lineHeight: 35,
     },
+    Humidity: {
+        fontSize: 25,
+        fontWeight: "bold",
+        textAlign: 'center',
+        color: 'white',
+        lineHeight: 35,
+    },
+    WindSpeed: {
+        fontSize: 24,
+        fontWeight: "bold",
+        textAlign: 'center',
+        color: 'white',
+        lineHeight: 35,
+    },
+    text: {
+        fontSize: 20,
+        fontWeight: "bold",
+        textAlign: 'center',
+        color: 'white',
+        lineHeight: 70,
+    }
 
 });
