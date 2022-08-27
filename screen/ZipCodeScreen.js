@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, TouchableHighlight } from "react-native";
+import { FlatList, ImageBackground, TouchableHighlight } from "react-native";
 import { StatusBar, View, Text, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
@@ -9,6 +9,11 @@ const availableZipItems = [
     { place: 'Chiangmai', code: '50000' },
     { place: 'Khonkaen', code: '40000' },
     { place: 'Chonburi', code: '20000' },
+    { place: 'Suratthani', code: '84000'},
+    { place: 'Puket', code: '83000'},
+    { place: 'Bangkik', code: '10110'},
+    { place: 'KhonKaen', code: '40000'},
+    { place: 'Kanchanaburi', code: '71000'}
    ]
 
 const ZipItem = ({place, code, navigation}) => (
@@ -28,14 +33,14 @@ const _keyExtractor = item => item.code
 export default function ZipCodeScreen() {
     const navigation = useNavigation()
     return (
-        <View>
-            <FlatList
-            data = {availableZipItems}
-            key = {_keyExtractor}
-            renderItem = {({item}) => <ZipItem {...item} navigation={navigation}/>}
-          />
-        <StatusBar styte="auto" />
-        </View>  
+            <View>
+                <FlatList
+                data = {availableZipItems}
+                key = {_keyExtractor}
+                renderItem = {({item}) => <ZipItem {...item} navigation={navigation}/>}
+             />
+             <StatusBar styte="auto" />
+            </View>  
     )
 }
 
